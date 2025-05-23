@@ -41,7 +41,7 @@ pipeline {
                 echo 'webhook is now working'
                 echo 'webhook is cool'
                 echo 'sky is back'
-                echo 'sky is bad'
+                
             }
         }
         
