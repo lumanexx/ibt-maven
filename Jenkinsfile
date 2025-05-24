@@ -1,11 +1,6 @@
 pipeline {
     agent any
-    parameters{
-        string(name:'Branch_Name', defaultValue:'main', description:'enter the branch to checkout')
-        choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: 'choose a number') 
-    }
-
-    stages {
+        stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
@@ -44,6 +39,18 @@ pipeline {
                 
             }
         }
-        
+        stage('condition') {
+            when{
+                expression{
+                    env.$Branch_Name=='main'
+                }
+            }
+            steps {
+                echo 'webhook is now working'
+                echo 'sky is back'
+                sh 'ls -l'
+                
+            }
+        }
     }
 }
