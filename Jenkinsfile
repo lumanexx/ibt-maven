@@ -41,7 +41,6 @@ pipeline {
                 echo 'webhook is now working'
                 echo 'sky is back'
                 sh 'ls -l'
-                sh 'whoami'
                 
             }
         }
